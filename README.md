@@ -63,7 +63,7 @@ Agent encounters "screenshot.png"
 **Step 1: Clone and copy**
 
 ```bash
-git clone https://github.com/<your-username>/claude-code-multimedia-hook.git
+git clone https://github.com/SongXue-J/claude-code-multimedia-hook.git
 cp claude-code-multimedia-hook/block_media_read.py ~/.claude/hooks/block_media_read.py
 ```
 
@@ -178,7 +178,7 @@ MIT © 2026 Song Xue
 **第一步：克隆并复制**
 
 ```bash
-git clone https://github.com/<your-username>/claude-code-multimedia-hook.git
+git clone https://github.com/SongXue-J/claude-code-multimedia-hook.git
 cp claude-code-multimedia-hook/block_media_read.py ~/.claude/hooks/block_media_read.py
 ```
 
