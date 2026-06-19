@@ -1,0 +1,32 @@
+## Multimedia File Handling (Mandatory)
+
+The current reasoning model (e.g., DeepSeek V4 Pro, MiMo V2.5 Pro) is **text-only** — it cannot directly process images, audio, or video.
+
+### Rule: Always use MCP for multimedia files
+
+- **Images** (.png, .jpg, .jpeg, .gif, .bmp, .webp, .svg) → use `mcp__mimo-media__understand_image`
+- **Audio** (.mp3, .wav, .m4a, .ogg, .flac, .aac) → use `mcp__mimo-media__understand_audio`
+- **Video** (.mp4, .mov, .avi, .mkv, .webm, .flv) → use `mcp__mimo-media__understand_video`
+
+### Forbidden
+
+- Do NOT use `Read` tool on the above file formats (will be blocked by hook)
+- Do NOT attempt to "interpret" binary multimedia content
+- Do NOT assume the content of images/audio/video
+
+### Correct workflow
+
+1. Identify a multimedia file path
+2. Choose the corresponding MCP tool based on the extension
+3. Call the MCP tool to obtain the text description
+4. Continue reasoning based on the returned text
+
+### Examples
+
+```
+# Wrong ❌
+Read("screenshot.png")
+
+# Correct ✅
+mcp__mimo-media__understand_image(prompt="Describe this image", image_path="screenshot.png")
+```
