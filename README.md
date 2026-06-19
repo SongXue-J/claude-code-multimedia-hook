@@ -146,6 +146,8 @@ MIT © 2026 Song Xue
 
 ---
 
+<a id="chinese"></a>
+
 ## 中文
 
 ### 问题
